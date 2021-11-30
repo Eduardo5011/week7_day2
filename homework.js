@@ -1,3 +1,6 @@
+
+
+
 //==========Exercise #1 ===========//
 /*
 Write a function that parses through the below object and displays all of their
@@ -18,19 +21,11 @@ favorite food dishes as shown:
 //     }]
 // }
 
-
-// console.log(Object.keys(person3))
-// console.log(Object.values(person3))
-
-// for(let i = 0; i < Object.keys(person3).length; i++){
-//     console.log(Object.keys(person3)[i])
+// function favoriteFoods(){
+//     console.log(Object.values(person3))
 // }
 
-// for (let key in person3){
-//     console.log(key)
-//     console.log(person3[key])
-// }
-
+// favoriteFoods();
 
 
 //=======Exercise #2=========//
@@ -42,48 +37,65 @@ Create two people using the 'new' keyword, and print
 both of their infos and increment one persons
 age by 3 years. Use an arrow function for both methods
 */
-
 // Create our Person Prototype
+// Use an arrow to create the printInfo method
+// Create another arrow function for the addAge method that takes a single parameter
+// Adding to the age 
+
+
 class Person {
     constructor(name, age) {
-        this.name = name
-        this.age = age
+        this.name = name;
+        this.age = age;
 
+        this.printInfo = () => {
+            console.log(`Hi! My name is ${this.name} and I am ${this.age} years old.`);
+        };
 
+        this.addAge = () => {
+            console.log(age++);
+        };
 
-        //method
-        this.printInfo = function () {
-            console.log(`my name is ${this.name} and im ${this.age}, years old`)
-
-        }
     }
-}
-let myPerson = new Person('Eduardo', '31')
-console.log(Eduardo)
-console.log(wilma.printInfo())
-    
+};
 
- 
-            // console.log(person)
-            // // Use an arrow to create the printInfo method
-            // Create another arrow function for the addAge method that takes a single parameter
-            // Adding to the age 
-            // =============Exercise #3 ============//
-            // Create a Promised based function that will check a string to determine if it's length is greater than 10.
-            // If the length is greater than ten console log "Big word". 
-            // If the length of the string is less than 10 console log "Small Number"
-            
-            let p = new Promise((resolve, reject) => {
-                let a = 10 + 1
-                if (a == 2) {
-                    resolve('Big word')
-                } else {
-                    reject('Small number')
-                }
+let eduardo = new Person('eduardo', 21);
+console.log(eduardo);
+eduardo.printInfo();
 
-            })
-            p.then((message) => {
-                console.log('its a' + message)
-            }).catch((message) => {
-                console.log('its a ' + message)
-            })
+let jimmy = new Person('Jimmy', 40);
+console.log(jimmy);
+jimmy.printInfo();
+jimmy.addAge();
+
+
+
+
+// =============Exercise #3 ============//
+/*
+    Create a Promised based function that will check a string to determine if it's 
+    length is greater than 10. If the length is greater than ten console log "Big word". 
+    If the length of the string is less than 10 console log "Small Number"
+*/
+
+// const moreThanTen = (string) =>{
+//     return new Promise(
+//         (resolve,reject)=>{
+//             if(string.length  >= 10){
+//                 resolve(true);
+//             }else{
+//                 reject(false);
+//             }
+//         }
+//     )       
+// };
+
+// moreThanTen("onomatopoeia").then(
+//     (result)=>{
+//         console.log("Big word");
+//     }
+// ).catch(
+//     (error)=>{
+//         console.log("Small Number");
+//     }
+// );
