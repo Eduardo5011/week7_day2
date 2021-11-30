@@ -7,25 +7,25 @@ Write a function that parses through the below object and displays all of their
 favorite food dishes as shown:
 */
 
-// let person3 = {
-//     pizza:["Deep Dish","South Side Thin Crust"],
-//     tacos:"Anything not from Taco bell",
-//     burgers:"Portillos Burgers",
-//     ice_cream:["Chocolate","Vanilla","Oreo"],
-//     shakes:[{
-//         oberwise:"Chocolate",
-//         dunkin:"Vanilla",
-//         culvers:"All of them",
-//         mcDonalds:"Sham-rock-shake",
-//         cupids_candies:"Chocolate Malt"
-//     }]
-// }
+let person3 = {
+    pizza:["Deep Dish","South Side Thin Crust"],
+    tacos:"Anything not from Taco bell",
+    burgers:"Portillos Burgers",
+    ice_cream:["Chocolate","Vanilla","Oreo"],
+    shakes:[{
+        oberwise:"Chocolate",
+        dunkin:"Vanilla",
+        culvers:"All of them",
+        mcDonalds:"Sham-rock-shake",
+        cupids_candies:"Chocolate Malt"
+    }]
+}
 
-// function favoriteFoods(){
-//     console.log(Object.values(person3))
-// }
+function favoriteFoods(){
+    console.log(Object.values(person3))
+}
 
-// favoriteFoods();
+favoriteFoods();
 
 
 //=======Exercise #2=========//
@@ -78,24 +78,24 @@ jimmy.addAge();
     If the length of the string is less than 10 console log "Small Number"
 */
 
-// const moreThanTen = (string) =>{
-//     return new Promise(
-//         (resolve,reject)=>{
-//             if(string.length  >= 10){
-//                 resolve(true);
-//             }else{
-//                 reject(false);
-//             }
-//         }
-//     )       
-// };
+const moreThanTen = (string) =>{
+    return new Promise(
+        (resolve,reject)=>{
+            if(string.length  >= 10){
+                resolve(true);
+            }else{
+                reject(false);
+            }
+        }
+    )       
+};
 
-// moreThanTen("onomatopoeia").then(
-//     (result)=>{
-//         console.log("Big word");
-//     }
-// ).catch(
-//     (error)=>{
-//         console.log("Small Number");
-//     }
-// );
+moreThanTen("onomatopoeia").then(
+    (result)=>{
+        console.log("Big word");
+    }
+).catch(
+    (error)=>{
+        console.log("Small Number");
+    }
+);
